@@ -24,18 +24,19 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8f-BM-kod">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8f-BM-kod">
                                 <rect key="frame" x="226" y="528" width="149" height="30"/>
-                                <color key="backgroundColor" red="0.8784313725490196" green="0.62352941176470589" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Continue">
-                                    <color key="titleColor" red="0.80000000000000004" green="0.92549019607843142" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.66274509803921566" blue="0.72941176470588232" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="doneButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mut-ZQ-uZ6"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.50980392156862742" green="0.90196078431372551" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.396078431372549" green="0.72941176470588232" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="h8f-BM-kod" secondAttribute="trailing" constant="205" id="8vi-gV-zRc"/>
                             <constraint firstItem="LC6-Gt-u3f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JcA-lI-1cd"/>
@@ -48,6 +49,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Pbq-fb-BFg"/>
+                    <connections>
+                        <outlet property="doneButtonOutlet" destination="h8f-BM-kod" id="14W-2l-5Pq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -197,13 +201,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C2a-Ua-Uf9">
-                                <rect key="frame" x="166" y="141" width="268" height="216"/>
+                                <rect key="frame" x="140.5" y="141" width="320" height="216"/>
                                 <connections>
                                     <outlet property="delegate" destination="P42-5E-gTZ" id="pIH-xe-Ryn"/>
                                 </connections>
                             </pickerView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rav-mG-BP6">
-                                <rect key="frame" x="197" y="425" width="207" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Work Interval" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQY-NW-s2m">
+                                <rect key="frame" x="197.5" y="109" width="206" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rav-mG-BP6">
+                                <rect key="frame" x="225.5" y="466" width="149" height="29"/>
                                 <segments>
                                     <segment title="1 Minute"/>
                                     <segment title="2 Minutes"/>
@@ -212,18 +222,24 @@
                                     <action selector="selectActivityInterval:" destination="P42-5E-gTZ" eventType="valueChanged" id="Cs0-ci-OG2"/>
                                 </connections>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Activity Interval" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOl-Ed-9Mn">
+                                <rect key="frame" x="185" y="399" width="230" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.396078431372549" green="0.72941176470588232" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="rav-mG-BP6" firstAttribute="top" secondItem="C2a-Ua-Uf9" secondAttribute="bottom" constant="27" id="9KA-Wx-RhX"/>
-                            <constraint firstItem="rav-mG-BP6" firstAttribute="leading" secondItem="tSL-P3-sdK" secondAttribute="leadingMargin" constant="177" id="AaL-iK-BDc"/>
-                            <constraint firstItem="C2a-Ua-Uf9" firstAttribute="leading" secondItem="tSL-P3-sdK" secondAttribute="leadingMargin" constant="146" id="FTn-Tp-gRA"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="C2a-Ua-Uf9" secondAttribute="trailing" constant="146" id="GB3-BE-Noh"/>
-                            <constraint firstItem="K2w-7R-LMS" firstAttribute="top" secondItem="rav-mG-BP6" secondAttribute="bottom" constant="144" id="V4j-jO-1qD"/>
-                            <constraint firstItem="C2a-Ua-Uf9" firstAttribute="top" secondItem="B2L-gJ-xI6" secondAttribute="bottom" constant="77" id="aIq-n6-Twl"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="rav-mG-BP6" secondAttribute="trailing" constant="176" id="f0b-wC-3VS"/>
-                            <constraint firstItem="C2a-Ua-Uf9" firstAttribute="leading" secondItem="tSL-P3-sdK" secondAttribute="leadingMargin" constant="146" id="l2f-RZ-7E5"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="C2a-Ua-Uf9" secondAttribute="trailing" constant="146" id="v5a-Ux-COu"/>
+                            <constraint firstItem="C2a-Ua-Uf9" firstAttribute="top" secondItem="qQY-NW-s2m" secondAttribute="bottom" constant="8" id="DfD-u8-Qa1"/>
+                            <constraint firstItem="rav-mG-BP6" firstAttribute="top" secondItem="QOl-Ed-9Mn" secondAttribute="bottom" constant="43" id="G7L-Es-UMA"/>
+                            <constraint firstItem="qQY-NW-s2m" firstAttribute="centerX" secondItem="tSL-P3-sdK" secondAttribute="centerX" id="JAM-eN-kvN"/>
+                            <constraint firstItem="C2a-Ua-Uf9" firstAttribute="centerX" secondItem="tSL-P3-sdK" secondAttribute="centerX" id="LY9-GU-v8E"/>
+                            <constraint firstItem="qQY-NW-s2m" firstAttribute="top" secondItem="B2L-gJ-xI6" secondAttribute="bottom" constant="45" id="M9m-SZ-ynW"/>
+                            <constraint firstItem="QOl-Ed-9Mn" firstAttribute="centerX" secondItem="tSL-P3-sdK" secondAttribute="centerX" id="TLM-SC-XPc"/>
+                            <constraint firstItem="C2a-Ua-Uf9" firstAttribute="top" secondItem="qQY-NW-s2m" secondAttribute="bottom" constant="8" id="idy-AR-rkR"/>
+                            <constraint firstItem="QOl-Ed-9Mn" firstAttribute="top" secondItem="C2a-Ua-Uf9" secondAttribute="bottom" constant="42" id="ko4-nv-PIA"/>
+                            <constraint firstItem="rav-mG-BP6" firstAttribute="centerX" secondItem="tSL-P3-sdK" secondAttribute="centerX" id="rhg-tI-bhP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="3po-nr-Czw"/>

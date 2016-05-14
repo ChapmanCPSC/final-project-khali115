@@ -10,10 +10,11 @@ import UIKit
 
 class TutorialViewController: UIViewController {
 
+    @IBOutlet var doneButtonOutlet: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        doneButtonOutlet.layer.cornerRadius = 10
     }
 
     override func didReceiveMemoryWarning() {

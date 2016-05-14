@@ -54,6 +54,13 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
             workInterval = 10
         }
     }
+    
+    //reference:http://stackoverflow.com/questions/29243564/change-uipicker-color-swift
+    func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let titleData = reminderIntervals[row]
+        var myTitle = NSAttributedString(string: titleData, attributes: [NSForegroundColorAttributeName:UIColor.whiteColor()])
+        return myTitle
+    }
 
     @IBAction func selectActivityInterval(sender: UISegmentedControl) {
         
