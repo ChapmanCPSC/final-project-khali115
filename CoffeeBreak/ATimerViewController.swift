@@ -13,6 +13,8 @@ class ATimerViewController: UIViewController {
     
     @IBOutlet var workTimerLabel: UILabel!
     @IBOutlet var activityTimerLabel: UILabel!
+    @IBOutlet var stopButtonOutlet: UIButton!
+    @IBOutlet var startButtonOutlet: UIButton!
     
     //for work state
     var workTimer = NSTimer()
@@ -43,6 +45,7 @@ class ATimerViewController: UIViewController {
                     }
                 }
         print("Line 43")
+        stopButtonOutlet.enabled = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,12 +66,29 @@ class ATimerViewController: UIViewController {
     }
     
     
-    @IBAction func startButton(sender: AnyObject) {
+    @IBAction func startButton(sender: UIButton) {
         print("Line 53")
         startWorkTimer()
-        
+        sender.enabled = false
+        stopButtonOutlet.enabled = true
     }
     
+    @IBAction func stopButton(sender: UIButton) {
+        if activityTimer.valid{
+            activityTimer.invalidate()
+        }
+        if workTimer.valid{
+            workTimer.invalidate()
+        }
+        
+        activitySeconds = 0
+        workSeconds = 0
+        
+        workTimerLabel.text = "Stopped Session"
+        activityTimerLabel.text = "Stopped Session"
+        startButtonOutlet.enabled = true
+        
+    }
     
     func startActivityTimer(){
         print("Line 64")

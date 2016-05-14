@@ -17,12 +17,14 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
     let breakIntervals = [1,2]
     
     @IBOutlet var workIntervalPickerView: UIPickerView!
+    @IBOutlet var segControlOutlet: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         workIntervalPickerView.delegate = self
         workIntervalPickerView.dataSource = self
+        segControlOutlet.tintColor = UIColor(red: 204/255, green: 236/255, blue: 255/255, alpha: 1.0)
     }
     
     override func didReceiveMemoryWarning() {
