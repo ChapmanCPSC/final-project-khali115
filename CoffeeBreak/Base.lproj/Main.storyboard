@@ -201,19 +201,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C2a-Ua-Uf9">
-                                <rect key="frame" x="140.5" y="141" width="320" height="216"/>
+                                <rect key="frame" x="140.5" y="144.5" width="320" height="216"/>
                                 <connections>
                                     <outlet property="delegate" destination="P42-5E-gTZ" id="pIH-xe-Ryn"/>
                                 </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Work Interval" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQY-NW-s2m">
-                                <rect key="frame" x="197.5" y="109" width="206" height="24"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <rect key="frame" x="167.5" y="109" width="265" height="31.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Activity Interval" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOl-Ed-9Mn">
+                                <rect key="frame" x="152.5" y="402.5" width="295.5" height="31.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rav-mG-BP6">
-                                <rect key="frame" x="225.5" y="466" width="149" height="29"/>
+                                <rect key="frame" x="170" y="477" width="260" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="ZhW-qC-Rnp"/>
+                                </constraints>
                                 <segments>
                                     <segment title="1 Minute"/>
                                     <segment title="2 Minutes"/>
@@ -222,22 +231,16 @@
                                     <action selector="selectActivityInterval:" destination="P42-5E-gTZ" eventType="valueChanged" id="Cs0-ci-OG2"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Activity Interval" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOl-Ed-9Mn">
-                                <rect key="frame" x="185" y="399" width="230" height="24"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.396078431372549" green="0.72941176470588232" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="C2a-Ua-Uf9" firstAttribute="top" secondItem="qQY-NW-s2m" secondAttribute="bottom" constant="8" id="DfD-u8-Qa1"/>
+                            <constraint firstItem="C2a-Ua-Uf9" firstAttribute="top" secondItem="qQY-NW-s2m" secondAttribute="bottom" constant="4" id="DfD-u8-Qa1"/>
                             <constraint firstItem="rav-mG-BP6" firstAttribute="top" secondItem="QOl-Ed-9Mn" secondAttribute="bottom" constant="43" id="G7L-Es-UMA"/>
                             <constraint firstItem="qQY-NW-s2m" firstAttribute="centerX" secondItem="tSL-P3-sdK" secondAttribute="centerX" id="JAM-eN-kvN"/>
                             <constraint firstItem="C2a-Ua-Uf9" firstAttribute="centerX" secondItem="tSL-P3-sdK" secondAttribute="centerX" id="LY9-GU-v8E"/>
                             <constraint firstItem="qQY-NW-s2m" firstAttribute="top" secondItem="B2L-gJ-xI6" secondAttribute="bottom" constant="45" id="M9m-SZ-ynW"/>
                             <constraint firstItem="QOl-Ed-9Mn" firstAttribute="centerX" secondItem="tSL-P3-sdK" secondAttribute="centerX" id="TLM-SC-XPc"/>
-                            <constraint firstItem="C2a-Ua-Uf9" firstAttribute="top" secondItem="qQY-NW-s2m" secondAttribute="bottom" constant="8" id="idy-AR-rkR"/>
+                            <constraint firstItem="C2a-Ua-Uf9" firstAttribute="top" secondItem="qQY-NW-s2m" secondAttribute="bottom" constant="4" id="idy-AR-rkR"/>
                             <constraint firstItem="QOl-Ed-9Mn" firstAttribute="top" secondItem="C2a-Ua-Uf9" secondAttribute="bottom" constant="42" id="ko4-nv-PIA"/>
                             <constraint firstItem="rav-mG-BP6" firstAttribute="centerX" secondItem="tSL-P3-sdK" secondAttribute="centerX" id="rhg-tI-bhP"/>
                         </constraints>

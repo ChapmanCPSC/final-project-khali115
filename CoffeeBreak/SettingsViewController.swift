@@ -24,8 +24,8 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
         
         workIntervalPickerView.delegate = self
         workIntervalPickerView.dataSource = self
-        segControlOutlet.tintColor = UIColor(red: 204/255, green: 236/255, blue: 255/255, alpha: 1.0)
-        //segControlOutlet.tintColor = UIColor.blackColor()
+        //segControlOutlet.tintColor = UIColor(red: 204/255, green: 236/255, blue: 255/255, alpha: 1.0)
+        segControlOutlet.tintColor = UIColor.whiteColor()
     }
     
     override func didReceiveMemoryWarning() {
@@ -58,7 +58,7 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
     //reference:http://stackoverflow.com/questions/29243564/change-uipicker-color-swift
     func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         let titleData = reminderIntervals[row]
-        var myTitle = NSAttributedString(string: titleData, attributes: [NSForegroundColorAttributeName:UIColor.whiteColor()])
+        var myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 20.0)!,NSForegroundColorAttributeName:UIColor.whiteColor()])
         return myTitle
     }
 
