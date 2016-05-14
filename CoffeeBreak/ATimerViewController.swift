@@ -29,20 +29,18 @@ class ATimerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        
-        
-        // Do any additional setup after loading the view.
         movementManager.accelerometerUpdateInterval = 0.1
         
         //Start Tracking Accelerometer
-        //        movementManager.startAccelerometerUpdatesToQueue(NSOperationQueue.currentQueue()!) { (accelerometerData: CMAccelerometerData?, NSError) -> Void in
-        //            self.accelerationZ = accelerometerData!.acceleration.z
-        //            self
-        //            if(NSError != nil) {
-        //                print("\(NSError)")
-        //            }
-        //        }
+        print("Line 35")
+                movementManager.startAccelerometerUpdatesToQueue(NSOperationQueue.currentQueue()!) { (accelerometerData: CMAccelerometerData?, NSError) -> Void in
+                    self.accelerationZ = accelerometerData!.acceleration.z
+                    self
+                    if(NSError != nil) {
+                        print("\(NSError)")
+                    }
+                }
+        print("Line 43")
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,24 +50,19 @@ class ATimerViewController: UIViewController {
     
     
     @IBAction func startButton(sender: AnyObject) {
-        
-        movementManager.startAccelerometerUpdatesToQueue(NSOperationQueue.currentQueue()!) { (accelerometerData: CMAccelerometerData?, NSError) -> Void in
-            self.accelerationZ = accelerometerData!.acceleration.z
-            self
-            if(NSError != nil) {
-                print("\(NSError)")
-            }
-        }
-        
+        print("Line 53")
+        startWorkTimer()
         
     }
     
     
     func startActivityTimer(){
+        print("Line 64")
         activityTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: ("updateActivityTimer"), userInfo: nil, repeats: true)
     }
     
     func updateActivityTimer(){
+        print("Line 69")
         if (fabs(self.accelerationZ) > 1.0) && (activitySeconds < 5){
             activitySeconds = activitySeconds + 1
             activityTimerLabel.text = "\(activitySeconds)"
@@ -82,10 +75,12 @@ class ATimerViewController: UIViewController {
     }
     
     func startWorkTimer(){
+        print("Line 82")
         workTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: ("updateWorkTimer"), userInfo: nil, repeats: true)
     }
     
     func updateWorkTimer(){
+        print("Line 87")
         if (workSeconds < 10){
             
             workSeconds = workSeconds + 1
@@ -99,9 +94,5 @@ class ATimerViewController: UIViewController {
             //call reminder for user the take break
         }
     }
-
-    
-
-
 
 }

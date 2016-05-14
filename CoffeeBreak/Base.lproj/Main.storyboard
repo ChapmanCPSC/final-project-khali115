@@ -113,7 +113,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35.5" id="AOY-Ao-Oep"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Start"/>
                                 <connections>
                                     <action selector="startButton:" destination="G6U-40-Jwm" eventType="touchUpInside" id="usk-Pb-crY"/>
                                 </connections>
