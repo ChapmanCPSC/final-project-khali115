@@ -79,7 +79,8 @@ class ATimerViewController: UIViewController {
         print("Line 69")
         if (fabs(self.accelerationZ) > 1.0) && (activitySeconds < activityInterval){
             activitySeconds = activitySeconds + 1
-            activityTimerLabel.text = "\(activitySeconds)"
+            //activityTimerLabel.text = "\(activitySeconds)"
+            activityTimerLabel.text = formatTime(activitySeconds)
         }
         if(activitySeconds >= activityInterval){
             //stop this timer
@@ -98,7 +99,8 @@ class ATimerViewController: UIViewController {
         if (workSeconds < workInterval){
             
             workSeconds = workSeconds + 1
-            workTimerLabel.text = "\(workSeconds)"
+            //workTimerLabel.text = "\(workSeconds)"
+            workTimerLabel.text = formatTime(workSeconds)
         }
         else if (workSeconds >= workInterval){
             workTimer.invalidate()
@@ -107,6 +109,14 @@ class ATimerViewController: UIViewController {
             
             //call reminder for user the take break
         }
+    }
+    
+    func formatTime(t : Int) -> String{
+        
+        let hours = t / 3600
+        let minutes = t / 60 % 60
+        let seconds = t % 60
+        return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
     }
 
 }
