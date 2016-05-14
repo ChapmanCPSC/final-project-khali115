@@ -185,6 +185,9 @@
                                     <segment title="1 Minute"/>
                                     <segment title="2 Minutes"/>
                                 </segments>
+                                <connections>
+                                    <action selector="selectActivityInterval:" destination="P42-5E-gTZ" eventType="valueChanged" id="Cs0-ci-OG2"/>
+                                </connections>
                             </segmentedControl>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C2a-Ua-Uf9">
                                 <rect key="frame" x="166" y="141" width="268" height="216"/>

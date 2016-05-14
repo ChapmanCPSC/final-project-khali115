@@ -52,6 +52,19 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
         }
     }
 
+    @IBAction func selectActivityInterval(sender: UISegmentedControl) {
+        
+        let idx : Int = sender.selectedSegmentIndex
+        
+        switch idx{ 
+        case 0:
+            activityInterval = 10 //in seconds
+        case 1:
+            activityInterval = 120 //in seconds
+        default:
+            activityInterval = 60
+        }
+    }
 
 
 }
