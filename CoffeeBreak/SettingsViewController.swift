@@ -41,6 +41,16 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?{
         return "\(reminderIntervals[row]) Hour(s)"
     }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        switch row {
+        case 0: workInterval = 10
+        case 1: workInterval = 15
+        case 2: workInterval = 20
+        default:
+            workInterval = 10
+        }
+    }
 
 
 

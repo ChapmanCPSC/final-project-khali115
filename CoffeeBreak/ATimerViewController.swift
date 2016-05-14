@@ -17,10 +17,12 @@ class ATimerViewController: UIViewController {
     //for work state
     var workTimer = NSTimer()
     var workSeconds : Int = 0
+    //var workInterval :Int = 10 //value in seconds default will be 3600
     
     //for activity state
     var activityTimer = NSTimer()
     var activitySeconds : Int = 0
+    //var activityInterval : Int = 5 //value in seconds default will be 1 minute
     
     var accelerationZ : Double = 0.0
     var movementManager = CMMotionManager()
@@ -52,7 +54,6 @@ class ATimerViewController: UIViewController {
         let userDefaults = NSUserDefaults.standardUserDefaults()
         let viewedTutorial = userDefaults.boolForKey("completedTutorial")
         
-        
         if !viewedTutorial
         {
             let tutorialVC = self.storyboard!.instantiateViewControllerWithIdentifier("tutorialView")
@@ -76,11 +77,11 @@ class ATimerViewController: UIViewController {
     
     func updateActivityTimer(){
         print("Line 69")
-        if (fabs(self.accelerationZ) > 1.0) && (activitySeconds < 5){
+        if (fabs(self.accelerationZ) > 1.0) && (activitySeconds < activityInterval){
             activitySeconds = activitySeconds + 1
             activityTimerLabel.text = "\(activitySeconds)"
         }
-        if(activitySeconds >= 5){
+        if(activitySeconds >= activityInterval){
             //stop this timer
             activityTimer.invalidate()
             activityTimerLabel.text = "Good Job";
@@ -94,12 +95,12 @@ class ATimerViewController: UIViewController {
     
     func updateWorkTimer(){
         print("Line 87")
-        if (workSeconds < 10){
+        if (workSeconds < workInterval){
             
             workSeconds = workSeconds + 1
             workTimerLabel.text = "\(workSeconds)"
         }
-        else if (workSeconds >= 10){
+        else if (workSeconds >= workInterval){
             workTimer.invalidate()
             workTimerLabel.text = "Take a break!!"
             startActivityTimer()

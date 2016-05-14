@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7C8706371CE6D8D20043CE7F /* ATimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8706361CE6D8D20043CE7F /* ATimerViewController.swift */; };
+		7C8706391CE6E4FE0043CE7F /* SettingsValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8706381CE6E4FE0043CE7F /* SettingsValues.swift */; };
 		7CE085111CE692D800C4559C /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE085101CE692D800C4559C /* TutorialViewController.swift */; };
 		7CE085151CE6C5A800C4559C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE085141CE6C5A800C4559C /* SettingsViewController.swift */; };
 		7CFEF5F71CDAD15100C84DAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFEF5F61CDAD15100C84DAD /* AppDelegate.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		7C8706361CE6D8D20043CE7F /* ATimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATimerViewController.swift; sourceTree = "<group>"; };
+		7C8706381CE6E4FE0043CE7F /* SettingsValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsValues.swift; sourceTree = "<group>"; };
 		7CE085101CE692D800C4559C /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		7CE085141CE6C5A800C4559C /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		7CFEF5F31CDAD15100C84DAD /* CoffeeBreak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeBreak.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +79,7 @@
 				7CFEF6021CDAD15100C84DAD /* LaunchScreen.storyboard */,
 				7CFEF6051CDAD15100C84DAD /* Info.plist */,
 				7CFEF5FD1CDAD15100C84DAD /* CoffeeBreak.xcdatamodeld */,
+				7C8706381CE6E4FE0043CE7F /* SettingsValues.swift */,
 			);
 			path = CoffeeBreak;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C8706391CE6E4FE0043CE7F /* SettingsValues.swift in Sources */,
 				7CFEF5FF1CDAD15100C84DAD /* CoffeeBreak.xcdatamodeld in Sources */,
 				7CE085111CE692D800C4559C /* TutorialViewController.swift in Sources */,
 				7C8706371CE6D8D20043CE7F /* ATimerViewController.swift in Sources */,
