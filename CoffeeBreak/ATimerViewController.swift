@@ -48,6 +48,19 @@ class ATimerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidAppear(animated: Bool) {
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let viewedTutorial = userDefaults.boolForKey("completedTutorial")
+        
+        
+        if !viewedTutorial
+        {
+            let tutorialVC = self.storyboard!.instantiateViewControllerWithIdentifier("tutorialView")
+            self.presentViewController(tutorialVC, animated: true, completion: nil)
+        }
+
+    }
+    
     
     @IBAction func startButton(sender: AnyObject) {
         print("Line 53")

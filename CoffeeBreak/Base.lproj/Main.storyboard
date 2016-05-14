@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="b4k-lC-4tq">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tutorial View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoffeeBreak" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tutorialView" id="BYZ-38-t0r" customClass="TutorialViewController" customModule="CoffeeBreak" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -29,7 +29,7 @@
                                 <color key="backgroundColor" red="1" green="0.8063239606" blue="0.88010147630000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Continue"/>
                                 <connections>
-                                    <segue destination="b4k-lC-4tq" kind="show" id="9mv-37-UcK"/>
+                                    <action selector="doneButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mut-ZQ-uZ6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -49,7 +49,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1105" y="320"/>
+            <point key="canvasLocation" x="1801" y="-335"/>
         </scene>
         <!--Name of App-->
         <scene sceneID="B3b-sz-iZf">
