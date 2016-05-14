@@ -47,6 +47,12 @@ class ATimerViewController: UIViewController {
                 }
         print("Line 43")
         stopButtonOutlet.enabled = false
+        startButtonOutlet.layer.cornerRadius = 10
+        stopButtonOutlet.layer.cornerRadius = 10
+        workTimerLabel.layer.cornerRadius = 10
+        workTimerLabel.layer.masksToBounds = true
+        activityTimerLabel.layer.cornerRadius = 10
+        activityTimerLabel.layer.masksToBounds = true
     }
 
     override func didReceiveMemoryWarning() {

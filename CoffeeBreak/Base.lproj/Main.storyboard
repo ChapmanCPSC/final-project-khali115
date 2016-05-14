@@ -67,7 +67,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work Timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1e-5D-bWe">
                                 <rect key="frame" x="217" y="109" width="167" height="28"/>
-                                <color key="backgroundColor" red="0.50980392156862742" green="0.90196078431372551" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.396078431372549" green="0.72941176470588232" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="167" id="9ip-Sb-xiQ"/>
                                     <constraint firstAttribute="height" constant="28" id="zA5-IP-G7Y"/>
@@ -78,7 +78,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Emm-hz-6bb">
                                 <rect key="frame" x="194" y="158" width="213" height="28"/>
-                                <color key="backgroundColor" red="0.62745098039215685" green="1" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="213" id="5GV-l0-Mgw"/>
                                     <constraint firstAttribute="height" constant="28" id="FZ6-dI-ZWr"/>
@@ -89,7 +89,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jump Timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUa-P8-oTj">
                                 <rect key="frame" x="217" y="317" width="167" height="28"/>
-                                <color key="backgroundColor" red="0.50980392156862742" green="0.90196078431372551" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.396078431372549" green="0.72941176470588232" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="167" id="PqH-D1-luP"/>
                                     <constraint firstAttribute="height" constant="28" id="Y7O-rL-jQN"/>
@@ -100,13 +100,13 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wXd-nL-4iN">
                                 <rect key="frame" x="79" y="475" width="80" height="40"/>
-                                <color key="backgroundColor" red="0.8784313725490196" green="0.62352941176470589" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.66274509803921566" blue="0.72941176470588232" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="07p-JE-GBu"/>
                                     <constraint firstAttribute="width" constant="80" id="N2l-cv-Eid"/>
                                 </constraints>
                                 <state key="normal" title="Start">
-                                    <color key="titleColor" red="0.80000000000000004" green="0.92549019607843142" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="startButton:" destination="G6U-40-Jwm" eventType="touchUpInside" id="usk-Pb-crY"/>
@@ -114,7 +114,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGK-zR-O6K">
                                 <rect key="frame" x="194" y="368" width="213" height="28"/>
-                                <color key="backgroundColor" red="0.62745098039215685" green="1" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="80k-Lc-M6H"/>
                                     <constraint firstAttribute="width" constant="213" id="ECE-vI-e26"/>
@@ -126,20 +126,20 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AcW-Ov-3HK">
                                 <rect key="frame" x="441" y="475" width="80" height="40"/>
-                                <color key="backgroundColor" red="0.8784313725490196" green="0.62352941176470589" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.66274509803921566" blue="0.72941176470588232" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="UQr-ww-OCj"/>
                                     <constraint firstAttribute="width" constant="80" id="wUS-sa-WEm"/>
                                 </constraints>
                                 <state key="normal" title="Stop">
-                                    <color key="titleColor" red="0.80000000000000004" green="0.92549019607843142" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="stopButton:" destination="G6U-40-Jwm" eventType="touchUpInside" id="cCH-FZ-SnB"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.50980392156862742" green="0.90196078431372551" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.396078431372549" green="0.72941176470588232" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="rUa-P8-oTj" secondAttribute="trailing" constant="196" id="39C-Hs-8u7"/>
                             <constraint firstItem="wXd-nL-4iN" firstAttribute="leading" secondItem="NID-dt-B71" secondAttribute="leadingMargin" constant="59" id="79g-D4-tc8"/>
@@ -196,6 +196,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C2a-Ua-Uf9">
+                                <rect key="frame" x="166" y="141" width="268" height="216"/>
+                                <connections>
+                                    <outlet property="delegate" destination="P42-5E-gTZ" id="pIH-xe-Ryn"/>
+                                </connections>
+                            </pickerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rav-mG-BP6">
                                 <rect key="frame" x="197" y="425" width="207" height="29"/>
                                 <segments>
@@ -206,14 +212,8 @@
                                     <action selector="selectActivityInterval:" destination="P42-5E-gTZ" eventType="valueChanged" id="Cs0-ci-OG2"/>
                                 </connections>
                             </segmentedControl>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C2a-Ua-Uf9">
-                                <rect key="frame" x="166" y="141" width="268" height="216"/>
-                                <connections>
-                                    <outlet property="delegate" destination="P42-5E-gTZ" id="pIH-xe-Ryn"/>
-                                </connections>
-                            </pickerView>
                         </subviews>
-                        <color key="backgroundColor" red="0.39749319830047336" green="0.72901347153482343" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.396078431372549" green="0.72941176470588232" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="rav-mG-BP6" firstAttribute="top" secondItem="C2a-Ua-Uf9" secondAttribute="bottom" constant="27" id="9KA-Wx-RhX"/>
                             <constraint firstItem="rav-mG-BP6" firstAttribute="leading" secondItem="tSL-P3-sdK" secondAttribute="leadingMargin" constant="177" id="AaL-iK-BDc"/>

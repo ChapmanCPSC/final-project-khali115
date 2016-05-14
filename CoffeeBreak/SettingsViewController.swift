@@ -25,6 +25,7 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
         workIntervalPickerView.delegate = self
         workIntervalPickerView.dataSource = self
         segControlOutlet.tintColor = UIColor(red: 204/255, green: 236/255, blue: 255/255, alpha: 1.0)
+        //segControlOutlet.tintColor = UIColor.blackColor()
     }
     
     override func didReceiveMemoryWarning() {
