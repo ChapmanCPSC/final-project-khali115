@@ -112,7 +112,7 @@
                                     <action selector="startButton:" destination="G6U-40-Jwm" eventType="touchUpInside" id="usk-Pb-crY"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGK-zR-O6K">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGK-zR-O6K">
                                 <rect key="frame" x="194" y="368" width="213" height="28"/>
                                 <color key="backgroundColor" red="0.62745098039215685" green="1" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -174,6 +174,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="activityTimerLabel" destination="LGK-zR-O6K" id="RCP-Gt-oFb"/>
+                        <outlet property="settingsNavButton" destination="E6w-0n-kC6" id="dcq-de-lUU"/>
                         <outlet property="startButtonOutlet" destination="wXd-nL-4iN" id="9Cp-gK-u6R"/>
                         <outlet property="stopButtonOutlet" destination="AcW-Ov-3HK" id="UO6-AX-FST"/>
                         <outlet property="workTimerLabel" destination="Emm-hz-6bb" id="bHd-PA-ksw"/>

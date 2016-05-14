@@ -16,6 +16,7 @@ class ATimerViewController: UIViewController {
     @IBOutlet var stopButtonOutlet: UIButton!
     @IBOutlet var startButtonOutlet: UIButton!
     
+    @IBOutlet var settingsNavButton: UIBarButtonItem!
     //for work state
     var workTimer = NSTimer()
     var workSeconds : Int = 0
@@ -68,9 +69,12 @@ class ATimerViewController: UIViewController {
     
     @IBAction func startButton(sender: UIButton) {
         print("Line 53")
+        workTimerLabel.text = "";
+        activityTimerLabel.text = "";
         startWorkTimer()
         sender.enabled = false
         stopButtonOutlet.enabled = true
+        settingsNavButton.enabled = false
     }
     
     @IBAction func stopButton(sender: UIButton) {
@@ -87,6 +91,7 @@ class ATimerViewController: UIViewController {
         workTimerLabel.text = "Stopped Session"
         activityTimerLabel.text = "Stopped Session"
         startButtonOutlet.enabled = true
+        settingsNavButton.enabled = true
         
     }
     
