@@ -41,9 +41,9 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
         return reminderIntervals.count
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?{
-        return "\(reminderIntervals[row]) Hour(s)"
-    }
+    /*func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?{
+        return reminderIntervals[row]
+    }*/
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         switch row {
@@ -57,7 +57,7 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
     
     //reference:http://stackoverflow.com/questions/29243564/change-uipicker-color-swift
     func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-        let titleData = reminderIntervals[row]
+        let titleData = "\(reminderIntervals[row]) Hour(s)"
         var myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 20.0)!,NSForegroundColorAttributeName:UIColor.whiteColor()])
         return myTitle
     }
