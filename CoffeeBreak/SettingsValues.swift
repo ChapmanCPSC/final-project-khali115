@@ -9,4 +9,4 @@
 import Foundation
 
 var workInterval : Int = 10 //3600
-var activityInterval : Int = 5 //60
+var activityInterval : Int = 10 //60

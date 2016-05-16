@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreMotion
+import AVFoundation
+import AudioToolbox
 
 class ATimerViewController: UIViewController {
     
@@ -75,12 +77,12 @@ class ATimerViewController: UIViewController {
     
     @IBAction func startButton(sender: UIButton) {
         print("Line 53")
-        workTimerLabel.text = "";
-        activityTimerLabel.text = "";
-        startWorkTimer()
+        workTimerLabel.text = formatTime(activitySeconds)
+        activityTimerLabel.text = formatTime(workSeconds)
         sender.enabled = false
         stopButtonOutlet.enabled = true
         settingsNavButton.enabled = false
+        startWorkTimer()
     }
     
     @IBAction func stopButton(sender: UIButton) {
@@ -104,19 +106,23 @@ class ATimerViewController: UIViewController {
     func startActivityTimer(){
         print("Line 64")
         activityTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: ("updateActivityTimer"), userInfo: nil, repeats: true)
+        playSound(1304)
     }
     
     func updateActivityTimer(){
         print("Line 69")
         if (fabs(self.accelerationZ) > 1.0) && (activitySeconds < activityInterval){
             activitySeconds = activitySeconds + 1
-            //activityTimerLabel.text = "\(activitySeconds)"
             activityTimerLabel.text = formatTime(activitySeconds)
         }
+        
         if(activitySeconds >= activityInterval){
             //stop this timer
             activityTimer.invalidate()
             activityTimerLabel.text = "Good Job";
+            playSound(1331)
+            restartTiming()
+            startButtonOutlet.enabled = true
         }
     }
     
@@ -130,7 +136,6 @@ class ATimerViewController: UIViewController {
         if (workSeconds < workInterval){
             
             workSeconds = workSeconds + 1
-            //workTimerLabel.text = "\(workSeconds)"
             workTimerLabel.text = formatTime(workSeconds)
         }
         else if (workSeconds >= workInterval){
@@ -148,6 +153,17 @@ class ATimerViewController: UIViewController {
         let minutes = t / 60 % 60
         let seconds = t % 60
         return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
+    }
+    
+    func playSound(soundID : Int){
+        AudioServicesPlayAlertSound(SystemSoundID(soundID))
+    }
+    
+    func restartTiming(){
+        activitySeconds = 0
+        workSeconds = 0
+        //activityTimerLabel.text = formatTime(activitySeconds)
+        //workTimerLabel.text = formatTime(workSeconds)
     }
 
 }

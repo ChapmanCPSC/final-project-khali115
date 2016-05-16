@@ -24,7 +24,6 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
         
         workIntervalPickerView.delegate = self
         workIntervalPickerView.dataSource = self
-        //segControlOutlet.tintColor = UIColor(red: 204/255, green: 236/255, blue: 255/255, alpha: 1.0)
         segControlOutlet.tintColor = UIColor.whiteColor()
     }
     
@@ -40,10 +39,6 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
         return reminderIntervals.count
     }
-    
-    /*func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?{
-        return reminderIntervals[row]
-    }*/
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         switch row {
