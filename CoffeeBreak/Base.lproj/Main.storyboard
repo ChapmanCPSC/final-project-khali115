@@ -42,11 +42,12 @@
                                     <action selector="doneButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mut-ZQ-uZ6"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yRb-Xx-qbo">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="yRb-Xx-qbo">
                                 <rect key="frame" x="115" y="125" width="370" height="345"/>
                                 <color key="backgroundColor" red="0.396078431372549" green="0.72941176470588232" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">If are a workaholic and forget to take breaks then this app should help remind you. From the settings page you can choose how often you want to be reminded to take a break. Then from the timer page tap the start button and your timer will begin counting.                                                            When its time to take a break you must get up and jump around to turn off the reminder. Although a stop button is provided, use it only if you want to change your settings after you have already started your timer.</string>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <mutableString key="text">This app will be sure to keep you active. Instead of just reminding you to take a break, you will have to prove it to your device. Just shake your device during activity periods and thats all you need to stop your reminder. A friendly tone will alert you when your activity time is up. Just tap the start button if you would like to set your reminder again. Beware of the stop button. Only tap this button if you wish to change timer settings once you have started a session. Too much use of this button will lead to laziness and inactivty! So get to work and stary active!</mutableString>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
