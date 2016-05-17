@@ -123,6 +123,7 @@ class ATimerViewController: UIViewController {
             playSound(1331)
             restartTiming()
             startButtonOutlet.enabled = true
+            settingsNavButton.enabled = true
         }
     }
     

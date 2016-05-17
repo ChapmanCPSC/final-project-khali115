@@ -42,11 +42,11 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         switch row {
-        case 0: workInterval = 10
-        case 1: workInterval = 15
-        case 2: workInterval = 20
+        case 0: workInterval = 3600
+        case 1: workInterval = 7200
+        case 2: workInterval = 10800
         default:
-            workInterval = 10
+            workInterval = 3600
         }
     }
     
@@ -63,7 +63,7 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
         
         switch idx{ 
         case 0:
-            activityInterval = 10 //in seconds
+            activityInterval = 60 //in seconds
         case 1:
             activityInterval = 120 //in seconds
         default:

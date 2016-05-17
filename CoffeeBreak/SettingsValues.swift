@@ -8,5 +8,5 @@
 
 import Foundation
 
-var workInterval : Int = 10 //3600
+var workInterval : Int = 10 //3600 these are default values
 var activityInterval : Int = 10 //60
